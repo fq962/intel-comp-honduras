@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Mail, Menu, Phone, X } from "lucide-react";
+import { Mail, Menu, Phone, X } from "lucide-react";
 import { CartButton } from "@/app/components/cart/cart-button";
 
 const NAV_LINKS = [
@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { href: "/productos", label: "Productos" },
   { href: "/#servicios", label: "Servicios" },
   { href: "/soporte", label: "Soporte" },
-  { href: "/#contacto", label: "Contáctanos" },
+  { href: "/contacto", label: "Contáctanos" },
 ];
 
 export function SiteHeader() {
@@ -68,14 +68,6 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <CartButton />
 
-          <Link
-            href="/#contacto"
-            className="hidden items-center gap-1.5 rounded-full bg-blue-800 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-800/20 transition-colors hover:bg-blue-900 md:inline-flex"
-          >
-            Solicitar cotización
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -101,13 +93,6 @@ export function SiteHeader() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/#contacto"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-blue-800 px-5 py-2.5 text-sm font-semibold text-white"
-            >
-              Solicitar cotización
-            </Link>
           </nav>
         </div>
       )}
