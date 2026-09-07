@@ -84,7 +84,7 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div id="soporte">
+          <div>
             <h3 className="text-sm font-semibold text-white">Contacto</h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
               <li className="flex gap-2.5">
