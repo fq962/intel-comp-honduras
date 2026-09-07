@@ -60,7 +60,7 @@ export function CartDrawer() {
             <Link
               href="/productos"
               onClick={closeCart}
-              className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-800 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-900"
             >
               Ver productos
             </Link>
@@ -88,7 +88,7 @@ export function CartDrawer() {
                 <Link
                   href="/checkout"
                   onClick={closeCart}
-                  className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+                  className="inline-flex items-center justify-center rounded-full bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900"
                 >
                   Finalizar compra
                 </Link>

@@ -73,7 +73,7 @@ export function ProductCatalog({
     <div className="bg-white">
       <div className="border-b border-slate-100 bg-slate-50">
         <div className="mx-auto flex max-w-7xl items-center gap-2 px-6 py-3 text-sm text-slate-500">
-          <Link href="/" className="hover:text-blue-600">
+          <Link href="/" className="hover:text-blue-800">
             Inicio
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
@@ -118,7 +118,7 @@ export function ProductCatalog({
                 onClick={() => selectCategory(null)}
                 className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium transition-colors ${
                   categoryId === null
-                    ? "bg-blue-50 text-blue-700"
+                    ? "bg-blue-50 text-blue-900"
                     : "text-slate-600 hover:bg-slate-50"
                 }`}
               >
@@ -139,7 +139,7 @@ export function ProductCatalog({
                     onClick={() => selectCategory(category.id)}
                     className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium transition-colors ${
                       categoryId === category.id
-                        ? "bg-blue-50 text-blue-700"
+                        ? "bg-blue-50 text-blue-900"
                         : "text-slate-600 hover:bg-slate-50"
                     }`}
                   >
@@ -163,7 +163,7 @@ export function ProductCatalog({
                 <select
                   value={sortBy}
                   onChange={(e) => selectSort(e.target.value as SortValue)}
-                  className="rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-700 focus:border-blue-400 focus:outline-none"
+                  className="rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-700 focus:border-blue-600 focus:outline-none"
                   aria-label="Ordenar por"
                 >
                   {SORT_OPTIONS.map((option) => (
@@ -181,7 +181,7 @@ export function ProductCatalog({
                     aria-pressed={view === "grid"}
                     className={`flex h-8 w-8 items-center justify-center rounded-md transition-colors ${
                       view === "grid"
-                        ? "bg-blue-600 text-white"
+                        ? "bg-blue-800 text-white"
                         : "text-slate-500 hover:bg-slate-50"
                     }`}
                   >
@@ -194,7 +194,7 @@ export function ProductCatalog({
                     aria-pressed={view === "list"}
                     className={`flex h-8 w-8 items-center justify-center rounded-md transition-colors ${
                       view === "list"
-                        ? "bg-blue-600 text-white"
+                        ? "bg-blue-800 text-white"
                         : "text-slate-500 hover:bg-slate-50"
                     }`}
                   >
@@ -237,7 +237,7 @@ export function ProductCatalog({
                       aria-current={p === currentPage}
                       className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-colors ${
                         p === currentPage
-                          ? "bg-blue-600 text-white"
+                          ? "bg-blue-800 text-white"
                           : "text-slate-600 hover:bg-slate-100"
                       }`}
                     >

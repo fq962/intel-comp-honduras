@@ -82,7 +82,7 @@ export function Categories() {
                 <p className="flex-1 text-sm leading-6 text-slate-600">
                   {description}
                 </p>
-                <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-blue-600">
+                <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-blue-800">
                   Ver más
                   <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>

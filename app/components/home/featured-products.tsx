@@ -25,7 +25,7 @@ export function FeaturedProducts() {
           </div>
           <Link
             href="/productos"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-blue-800 hover:text-blue-900"
           >
             Ver todo el catálogo
             <ChevronRight className="h-4 w-4" />

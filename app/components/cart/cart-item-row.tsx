@@ -23,7 +23,7 @@ export function CartItemRow({
       <div className="flex flex-1 flex-col gap-1">
         <div className="flex items-start justify-between gap-2">
           <div>
-            <p className="text-xs font-medium tracking-wide text-blue-600 uppercase">
+            <p className="text-xs font-medium tracking-wide text-blue-800 uppercase">
               {item.product.category}
             </p>
             <h3

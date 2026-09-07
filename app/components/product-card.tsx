@@ -33,7 +33,7 @@ export function ProductCard({
           className="h-28 w-28 flex-shrink-0 rounded-xl"
         />
         <div className="flex flex-1 flex-col justify-center gap-1">
-          <p className="text-xs font-medium tracking-wide text-blue-600 uppercase">
+          <p className="text-xs font-medium tracking-wide text-blue-800 uppercase">
             {product.category}
           </p>
           <h3 className="text-sm font-semibold text-slate-900">
@@ -46,7 +46,7 @@ export function ProductCard({
             <button
               type="button"
               onClick={handleAdd}
-              className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700"
+              className="inline-flex items-center gap-1.5 rounded-full bg-blue-800 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-900"
             >
               <ShoppingCart className="h-3.5 w-3.5" />
               Añadir
@@ -67,7 +67,7 @@ export function ProductCard({
               key={label}
               type="button"
               aria-label={label}
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-colors hover:bg-blue-600 hover:text-white"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-colors hover:bg-blue-800 hover:text-white"
             >
               <ActionIcon className="h-3.5 w-3.5" />
             </button>
@@ -76,7 +76,7 @@ export function ProductCard({
       </div>
 
       <div className="p-4">
-        <p className="text-xs font-medium tracking-wide text-blue-600 uppercase">
+        <p className="text-xs font-medium tracking-wide text-blue-800 uppercase">
           {product.category}
         </p>
         <h3 className="mt-1 text-sm font-semibold text-balance text-slate-900">
@@ -90,7 +90,7 @@ export function ProductCard({
             type="button"
             onClick={handleAdd}
             aria-label={`Añadir ${product.name} al carrito`}
-            className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-700"
+            className="inline-flex items-center gap-1.5 rounded-full bg-blue-800 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-900"
           >
             <ShoppingCart className="h-3.5 w-3.5" />
             Añadir

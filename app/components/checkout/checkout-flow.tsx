@@ -47,11 +47,11 @@ function Breadcrumb() {
   return (
     <div className="border-b border-slate-100 bg-slate-50">
       <div className="mx-auto flex max-w-7xl items-center gap-2 px-6 py-3 text-sm text-slate-500">
-        <Link href="/" className="hover:text-blue-600">
+        <Link href="/" className="hover:text-blue-800">
           Inicio
         </Link>
         <ChevronRight className="h-3.5 w-3.5" />
-        <Link href="/carrito" className="hover:text-blue-600">
+        <Link href="/carrito" className="hover:text-blue-800">
           Carrito
         </Link>
         <ChevronRight className="h-3.5 w-3.5" />
@@ -130,7 +130,7 @@ export function CheckoutFlow() {
               para coordinar la entrega.
             </p>
 
-            <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-700">
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-900">
               <Info className="h-3.5 w-3.5" />
               Modo de demostración: no se realizó ningún cargo real
             </div>
@@ -168,7 +168,7 @@ export function CheckoutFlow() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/"
-              className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+              className="inline-flex items-center justify-center rounded-full bg-blue-800 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900"
             >
               Volver al inicio
             </Link>
@@ -225,7 +225,7 @@ export function CheckoutFlow() {
                       type="text"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                       placeholder="Nombre y apellido"
                     />
                   </label>
@@ -238,7 +238,7 @@ export function CheckoutFlow() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                       placeholder="correo@ejemplo.com"
                     />
                   </label>
@@ -251,7 +251,7 @@ export function CheckoutFlow() {
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                       placeholder="(504) 0000-0000"
                     />
                   </label>
@@ -264,7 +264,7 @@ export function CheckoutFlow() {
                       type="text"
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
-                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                       placeholder="Calle, colonia, referencia"
                     />
                   </label>
@@ -277,7 +277,7 @@ export function CheckoutFlow() {
                       type="text"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
-                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                      className="mt-1.5 w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                       placeholder="San Pedro Sula"
                     />
                   </label>
@@ -292,7 +292,7 @@ export function CheckoutFlow() {
                   <label
                     className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 transition-colors ${
                       paymentMethod === "tarjeta"
-                        ? "border-blue-400 bg-blue-50/50"
+                        ? "border-blue-600 bg-blue-50/50"
                         : "border-slate-200"
                     }`}
                   >
@@ -302,7 +302,7 @@ export function CheckoutFlow() {
                       value="tarjeta"
                       checked={paymentMethod === "tarjeta"}
                       onChange={() => setPaymentMethod("tarjeta")}
-                      className="h-4 w-4 accent-blue-600"
+                      className="h-4 w-4 accent-blue-800"
                     />
                     <CreditCard className="h-4 w-4 text-slate-500" />
                     <span className="text-sm font-medium text-slate-800">
@@ -321,7 +321,7 @@ export function CheckoutFlow() {
                           type="text"
                           value={cardName}
                           onChange={(e) => setCardName(e.target.value)}
-                          className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                          className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                           placeholder="Como aparece en la tarjeta"
                         />
                       </label>
@@ -339,7 +339,7 @@ export function CheckoutFlow() {
                           }
                           pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
                           maxLength={19}
-                          className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                          className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                           placeholder="0000 0000 0000 0000"
                         />
                       </label>
@@ -357,7 +357,7 @@ export function CheckoutFlow() {
                           }
                           pattern="[0-9]{2}/[0-9]{2}"
                           maxLength={5}
-                          className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                          className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                           placeholder="MM/AA"
                         />
                       </label>
@@ -377,7 +377,7 @@ export function CheckoutFlow() {
                           }
                           pattern="[0-9]{3}"
                           maxLength={3}
-                          className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm focus:border-blue-400 focus:outline-none"
+                          className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm focus:border-blue-600 focus:outline-none"
                           placeholder="123"
                         />
                       </label>
@@ -387,7 +387,7 @@ export function CheckoutFlow() {
                   <label
                     className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 transition-colors ${
                       paymentMethod === "contra-entrega"
-                        ? "border-blue-400 bg-blue-50/50"
+                        ? "border-blue-600 bg-blue-50/50"
                         : "border-slate-200"
                     }`}
                   >
@@ -397,7 +397,7 @@ export function CheckoutFlow() {
                       value="contra-entrega"
                       checked={paymentMethod === "contra-entrega"}
                       onChange={() => setPaymentMethod("contra-entrega")}
-                      className="h-4 w-4 accent-blue-600"
+                      className="h-4 w-4 accent-blue-800"
                     />
                     <Truck className="h-4 w-4 text-slate-500" />
                     <span className="text-sm font-medium text-slate-800">
@@ -443,7 +443,7 @@ export function CheckoutFlow() {
               type="submit"
               form="checkout-form"
               disabled={processing}
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900 disabled:cursor-not-allowed disabled:opacity-70"
             >
               {processing ? (
                 <>

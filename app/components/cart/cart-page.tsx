@@ -10,7 +10,7 @@ function Breadcrumb() {
   return (
     <div className="border-b border-slate-100 bg-slate-50">
       <div className="mx-auto flex max-w-7xl items-center gap-2 px-6 py-3 text-sm text-slate-500">
-        <Link href="/" className="hover:text-blue-600">
+        <Link href="/" className="hover:text-blue-800">
           Inicio
         </Link>
         <ChevronRight className="h-3.5 w-3.5" />
@@ -38,7 +38,7 @@ export function CartPage() {
           </p>
           <Link
             href="/productos"
-            className="mt-2 inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+            className="mt-2 inline-flex items-center gap-2 rounded-full bg-blue-800 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900"
           >
             Ver productos
             <ArrowRight className="h-4 w-4" />
@@ -82,14 +82,14 @@ export function CartPage() {
             </div>
             <Link
               href="/checkout"
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900"
             >
               Proceder al pago
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/productos"
-              className="mt-3 block text-center text-sm font-semibold text-blue-600 hover:text-blue-700"
+              className="mt-3 block text-center text-sm font-semibold text-blue-800 hover:text-blue-900"
             >
               Seguir comprando
             </Link>

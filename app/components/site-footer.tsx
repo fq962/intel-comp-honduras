@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Mail, MapPin, Phone, Rss } from "lucide-react";
 import { FacebookIcon, InstagramIcon } from "@/app/components/social-icons";
 
@@ -28,13 +29,14 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
-                IC
-              </span>
-              <span className="text-lg font-semibold text-white">
-                Intelcomp Honduras
-              </span>
+            <div className="inline-flex rounded-lg bg-white p-2">
+              <Image
+                src="/assets/logo.png"
+                alt="Intelcomp Honduras"
+                width={200}
+                height={80}
+                className="h-12 w-auto"
+              />
             </div>
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-400">
               Tecnología, mobiliario y sistemas de seguridad de alta calidad
@@ -46,7 +48,7 @@ export function SiteFooter() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-300 transition-colors hover:bg-blue-600 hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-300 transition-colors hover:bg-blue-800 hover:text-white"
                 >
                   <Icon className="h-4 w-4" />
                 </a>

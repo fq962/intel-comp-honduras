@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Mail, Menu, Phone, X } from "lucide-react";
 import { CartButton } from "@/app/components/cart/cart-button";
@@ -40,14 +41,16 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
-            IC
-          </span>
-          <span className="text-lg font-semibold tracking-tight text-slate-900">
-            Intelcomp <span className="text-blue-600">Honduras</span>
-          </span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/assets/logo.png"
+            alt="Intelcomp Honduras"
+            width={200}
+            height={80}
+            priority
+            className="h-14 w-auto sm:h-16"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -55,7 +58,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-slate-600 transition-colors hover:text-blue-600"
+              className="text-sm font-medium text-slate-600 transition-colors hover:text-blue-800"
             >
               {link.label}
             </Link>
@@ -67,7 +70,7 @@ export function SiteHeader() {
 
           <Link
             href="/#contacto"
-            className="hidden items-center gap-1.5 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-600/20 transition-colors hover:bg-blue-700 md:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full bg-blue-800 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-800/20 transition-colors hover:bg-blue-900 md:inline-flex"
           >
             Solicitar cotización
             <ArrowRight className="h-4 w-4" />
@@ -101,7 +104,7 @@ export function SiteHeader() {
             <Link
               href="/#contacto"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white"
+              className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-blue-800 px-5 py-2.5 text-sm font-semibold text-white"
             >
               Solicitar cotización
             </Link>
