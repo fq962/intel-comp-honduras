@@ -1,7 +1,7 @@
 "use client";
 
 import { Eye, Heart, Scale, ShoppingCart } from "lucide-react";
-import { ImagePlaceholder } from "@/app/components/image-placeholder";
+import { ProductImage } from "@/app/components/product-image";
 import { useCart } from "@/app/components/cart/cart-context";
 import { formatPrice, PRODUCTS } from "@/app/lib/products";
 
@@ -23,14 +23,13 @@ export function ProductCard({
 
   if (!product) return null;
 
-  const Icon = product.icon;
   const handleAdd = () => addItem(product, 1);
 
   if (view === "list") {
     return (
       <div className="group flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 transition-shadow hover:shadow-lg hover:shadow-slate-200/60">
-        <ImagePlaceholder
-          icon={Icon}
+        <ProductImage
+          product={product}
           className="h-28 w-28 flex-shrink-0 rounded-xl"
         />
         <div className="flex flex-1 flex-col justify-center gap-1">
@@ -61,7 +60,7 @@ export function ProductCard({
   return (
     <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition-shadow hover:shadow-lg hover:shadow-slate-200/60">
       <div className="relative">
-        <ImagePlaceholder icon={Icon} className="aspect-square w-full" />
+        <ProductImage product={product} className="aspect-square w-full" />
         <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 transition-opacity group-hover:opacity-100">
           {QUICK_ACTIONS.map(({ icon: ActionIcon, label }) => (
             <button

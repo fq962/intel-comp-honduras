@@ -1,7 +1,7 @@
 "use client";
 
 import { Minus, Plus, Trash2 } from "lucide-react";
-import { ImagePlaceholder } from "@/app/components/image-placeholder";
+import { ProductImage } from "@/app/components/product-image";
 import { formatPrice } from "@/app/lib/products";
 import { useCart, type ResolvedCartItem } from "@/app/components/cart/cart-context";
 
@@ -13,12 +13,11 @@ export function CartItemRow({
   compact?: boolean;
 }) {
   const { setQuantity, removeItem } = useCart();
-  const Icon = item.product.icon;
 
   return (
     <div className="flex gap-3">
-      <ImagePlaceholder
-        icon={Icon}
+      <ProductImage
+        product={item.product}
         className={`flex-shrink-0 rounded-xl ${compact ? "h-16 w-16" : "h-24 w-24"}`}
       />
       <div className="flex flex-1 flex-col gap-1">

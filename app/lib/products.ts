@@ -25,6 +25,7 @@ export type Product = {
   icon: LucideIcon;
   name: string;
   price: number;
+  image?: { src: string; alt: string };
 };
 
 export const CATEGORIES: Category[] = [
@@ -61,9 +62,10 @@ function product(
   categoryId: string,
   name: string,
   price: number,
+  image?: Product["image"],
 ): Product {
   const { label, icon } = categoryOf(categoryId);
-  return { id, categoryId, category: label, icon, name, price };
+  return { id, categoryId, category: label, icon, name, price, image };
 }
 
 export const PRODUCTS: Product[] = [
@@ -110,18 +112,30 @@ export const PRODUCTS: Product[] = [
     "sillas-restaurante",
     "Silla apilable para restaurante",
     620,
+    {
+      src: "/assets/silla_plastico.png",
+      alt: "Silla apilable de plástico para restaurante",
+    },
   ),
   product(
     "silla-bar-respaldo",
     "sillas-restaurante",
     "Silla tipo bar con respaldo",
     890,
+    {
+      src: "/assets/silla_negra.png",
+      alt: "Silla negra con respaldo y patas de madera",
+    },
   ),
   product(
     "juego-silla-mesa-cafeteria",
     "sillas-restaurante",
     "Juego de silla y mesa para cafetería",
     1450,
+    {
+      src: "/assets/silla_metal.png",
+      alt: "Silla de metal con asiento acolchado para cafetería",
+    },
   ),
 
   product(
@@ -129,12 +143,20 @@ export const PRODUCTS: Product[] = [
     "sillas-iglesia",
     "Butaca para iglesia, modelo Clásica",
     1850,
+    {
+      src: "/assets/silla_roja.png",
+      alt: "Butaca acolchada roja para iglesia con porta biblias",
+    },
   ),
   product(
     "silla-auditorio-tapizada",
     "sillas-iglesia",
     "Silla de auditorio tapizada",
     1150,
+    {
+      src: "/assets/silla_zul_puntos.png",
+      alt: "Silla de auditorio tapizada en azul con porta biblias",
+    },
   ),
   product(
     "butaca-reclinable-iglesia",
