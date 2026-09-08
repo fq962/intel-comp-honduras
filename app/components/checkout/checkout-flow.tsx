@@ -168,7 +168,7 @@ export function CheckoutFlow() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/"
-              className="inline-flex items-center justify-center rounded-full bg-blue-800 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900"
+              className="inline-flex items-center justify-center rounded-full bg-[#fed207] px-6 py-3 text-sm font-semibold text-slate-900 transition-colors hover:bg-[#e6b800]"
             >
               Volver al inicio
             </Link>
@@ -443,7 +443,7 @@ export function CheckoutFlow() {
               type="submit"
               form="checkout-form"
               disabled={processing}
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900 disabled:cursor-not-allowed disabled:opacity-70"
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#fed207] px-5 py-3 text-sm font-semibold text-slate-900 transition-colors hover:bg-[#e6b800] disabled:cursor-not-allowed disabled:opacity-70"
             >
               {processing ? (
                 <>

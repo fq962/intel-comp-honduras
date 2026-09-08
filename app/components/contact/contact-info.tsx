@@ -17,7 +17,7 @@ export function ContactInfo() {
       <div className="rounded-2xl border border-slate-200 p-6 sm:p-8">
         <ul className="space-y-5 text-sm">
           <li className="flex gap-3">
-            <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-800" />
+            <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#8a6f00]" />
             <div>
               <p className="font-semibold text-slate-900">Dirección</p>
               <p className="mt-0.5 text-slate-600">{ADDRESS}</p>
@@ -25,7 +25,7 @@ export function ContactInfo() {
           </li>
 
           <li className="flex gap-3">
-            <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-800" />
+            <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#8a6f00]" />
             <div>
               <p className="font-semibold text-slate-900">Teléfono local</p>
               <a
@@ -38,7 +38,7 @@ export function ContactInfo() {
           </li>
 
           <li className="flex gap-3">
-            <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-800" />
+            <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#8a6f00]" />
             <div>
               <p className="font-semibold text-slate-900">
                 Llamadas y WhatsApp
@@ -60,7 +60,7 @@ export function ContactInfo() {
           </li>
 
           <li className="flex gap-3">
-            <Mail className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-800" />
+            <Mail className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#8a6f00]" />
             <div>
               <p className="font-semibold text-slate-900">
                 Correo electrónico
@@ -75,7 +75,7 @@ export function ContactInfo() {
           </li>
 
           <li className="flex gap-3">
-            <Clock className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-800" />
+            <Clock className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#8a6f00]" />
             <div>
               <p className="font-semibold text-slate-900">
                 Horario de atención

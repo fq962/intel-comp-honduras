@@ -11,7 +11,7 @@ export function CartButton() {
       type="button"
       onClick={openCart}
       aria-label="Abrir carrito de compras"
-      className="relative flex h-10 w-10 items-center justify-center rounded-full text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-800"
+      className="relative flex h-10 w-10 items-center justify-center rounded-full text-slate-600 transition-colors hover:bg-slate-100 hover:text-[#8a6f00]"
     >
       <ShoppingCart className="h-5 w-5" />
       {totalItems > 0 && (

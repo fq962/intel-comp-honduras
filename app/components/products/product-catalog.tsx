@@ -181,7 +181,7 @@ export function ProductCatalog({
                     aria-pressed={view === "grid"}
                     className={`flex h-8 w-8 items-center justify-center rounded-md transition-colors ${
                       view === "grid"
-                        ? "bg-blue-800 text-white"
+                        ? "bg-[#fed207] text-slate-900"
                         : "text-slate-500 hover:bg-slate-50"
                     }`}
                   >
@@ -194,7 +194,7 @@ export function ProductCatalog({
                     aria-pressed={view === "list"}
                     className={`flex h-8 w-8 items-center justify-center rounded-md transition-colors ${
                       view === "list"
-                        ? "bg-blue-800 text-white"
+                        ? "bg-[#fed207] text-slate-900"
                         : "text-slate-500 hover:bg-slate-50"
                     }`}
                   >
@@ -237,7 +237,7 @@ export function ProductCatalog({
                       aria-current={p === currentPage}
                       className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-colors ${
                         p === currentPage
-                          ? "bg-blue-800 text-white"
+                          ? "bg-[#fed207] text-slate-900"
                           : "text-slate-600 hover:bg-slate-100"
                       }`}
                     >

@@ -38,7 +38,7 @@ export function CartPage() {
           </p>
           <Link
             href="/productos"
-            className="mt-2 inline-flex items-center gap-2 rounded-full bg-blue-800 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900"
+            className="mt-2 inline-flex items-center gap-2 rounded-full bg-[#fed207] px-6 py-3 text-sm font-semibold text-slate-900 transition-colors hover:bg-[#e6b800]"
           >
             Ver productos
             <ArrowRight className="h-4 w-4" />
@@ -82,7 +82,7 @@ export function CartPage() {
             </div>
             <Link
               href="/checkout"
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-900"
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#fed207] px-5 py-3 text-sm font-semibold text-slate-900 transition-colors hover:bg-[#e6b800]"
             >
               Proceder al pago
               <ArrowRight className="h-4 w-4" />

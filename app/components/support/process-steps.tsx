@@ -34,7 +34,7 @@ export function ProcessSteps() {
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map(({ icon: Icon, title, description }) => (
             <div key={title} className="flex flex-col gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-800/10 text-blue-800">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#fed207]/15 text-[#8a6f00]">
                 <Icon className="h-5 w-5" />
               </span>
               <h3 className="text-sm font-semibold text-slate-900">{title}</h3>

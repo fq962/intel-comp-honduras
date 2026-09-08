@@ -48,7 +48,7 @@ export function SiteFooter() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-300 transition-colors hover:bg-blue-800 hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-300 transition-colors hover:bg-[#fed207] hover:text-slate-900"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -88,18 +88,18 @@ export function SiteFooter() {
             <h3 className="text-sm font-semibold text-white">Contacto</h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
               <li className="flex gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-500" />
+                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#fed207]" />
                 <span>
                   1ra Calle, 5 y 6 avenida N.E, Col. Smith, Plaza Kronos
                   Local N.2, San Pedro Sula
                 </span>
               </li>
               <li className="flex gap-2.5">
-                <Phone className="h-4 w-4 flex-shrink-0 text-blue-500" />
+                <Phone className="h-4 w-4 flex-shrink-0 text-[#fed207]" />
                 <span>(504) 2553-9541 · (504) 3396-9706</span>
               </li>
               <li className="flex gap-2.5">
-                <Mail className="h-4 w-4 flex-shrink-0 text-blue-500" />
+                <Mail className="h-4 w-4 flex-shrink-0 text-[#fed207]" />
                 <span>contacto@intelcomphonduras.com</span>
               </li>
             </ul>

@@ -46,7 +46,7 @@ export function ProductCard({
             <button
               type="button"
               onClick={handleAdd}
-              className="inline-flex items-center gap-1.5 rounded-full bg-blue-800 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-900"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[#fed207] px-3.5 py-1.5 text-xs font-semibold text-slate-900 transition-colors hover:bg-[#e6b800]"
             >
               <ShoppingCart className="h-3.5 w-3.5" />
               Añadir
@@ -67,7 +67,7 @@ export function ProductCard({
               key={label}
               type="button"
               aria-label={label}
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-colors hover:bg-blue-800 hover:text-white"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm transition-colors hover:bg-[#fed207] hover:text-slate-900"
             >
               <ActionIcon className="h-3.5 w-3.5" />
             </button>
@@ -90,7 +90,7 @@ export function ProductCard({
             type="button"
             onClick={handleAdd}
             aria-label={`Añadir ${product.name} al carrito`}
-            className="inline-flex items-center gap-1.5 rounded-full bg-blue-800 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-900"
+            className="inline-flex items-center gap-1.5 rounded-full bg-[#fed207] px-3.5 py-1.5 text-xs font-semibold text-slate-900 transition-colors hover:bg-[#e6b800]"
           >
             <ShoppingCart className="h-3.5 w-3.5" />
             Añadir

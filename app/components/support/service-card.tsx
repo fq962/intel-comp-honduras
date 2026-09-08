@@ -13,7 +13,7 @@ export function ServiceCard({ service }: { service: Service }) {
 
   return (
     <div className="flex flex-col gap-5 rounded-2xl border border-slate-200 p-6 sm:p-8">
-      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-800/10 text-blue-800">
+      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#fed207]/15 text-[#8a6f00]">
         <Icon className="h-6 w-6" />
       </span>
 
@@ -40,7 +40,7 @@ export function ServiceCard({ service }: { service: Service }) {
                   key={item}
                   className="flex items-start gap-2 text-sm text-slate-700"
                 >
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-800" />
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#8a6f00]" />
                   {item}
                 </li>
               ))}

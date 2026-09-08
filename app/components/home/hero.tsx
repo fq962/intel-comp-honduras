@@ -33,7 +33,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/productos"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-800 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-800/25 transition-colors hover:bg-blue-900"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#fed207] px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-lg shadow-[#fed207]/30 transition-colors hover:bg-[#e6b800]"
             >
               Ver productos
               <ArrowRight className="h-4 w-4" />
@@ -47,7 +47,7 @@ export function Hero() {
           </div>
 
           <div className="mt-10 flex items-center gap-2 text-sm text-slate-500">
-            <ShieldCheck className="h-4 w-4 text-blue-800" />
+            <ShieldCheck className="h-4 w-4 text-[#8a6f00]" />
             Garantía y devolución de 30 días en todos nuestros productos
           </div>
         </div>
