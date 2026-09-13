@@ -74,18 +74,30 @@ export const PRODUCTS: Product[] = [
     "computadoras",
     "Computadora de escritorio Core i5, 8GB RAM",
     12500,
+    {
+      src: "/assets/products/computadora-escritorio-i5.jpg",
+      alt: "Computadora de escritorio con monitor, teclado y mouse en oficina",
+    },
   ),
   product(
     "all-in-one-21",
     "computadoras",
     'All in One 21.5" para oficina',
     15900,
+    {
+      src: "/assets/products/all-in-one-21.jpg",
+      alt: "Computadora All in One sobre un escritorio",
+    },
   ),
   product(
     "laptop-empresarial-14",
     "computadoras",
     'Laptop empresarial 14", 16GB RAM',
     18300,
+    {
+      src: "/assets/products/laptop-empresarial-14.jpg",
+      alt: "Laptop empresarial abierta sobre un escritorio",
+    },
   ),
 
   product(
@@ -93,18 +105,30 @@ export const PRODUCTS: Product[] = [
     "sillas-oficina",
     "Silla ergonómica con soporte lumbar",
     2450,
+    {
+      src: "/assets/products/silla-ergonomica-lumbar.jpg",
+      alt: "Silla ergonómica de oficina con soporte lumbar",
+    },
   ),
   product(
     "silla-gerencial-cuero",
     "sillas-oficina",
     "Silla gerencial reclinable en cuero sintético",
     3200,
+    {
+      src: "/assets/products/silla-gerencial-cuero.jpg",
+      alt: "Silla gerencial reclinable en cuero negro",
+    },
   ),
   product(
     "silla-operativa-brazos",
     "sillas-oficina",
     "Silla operativa con brazos ajustables",
     1780,
+    {
+      src: "/assets/products/silla-operativa-brazos.jpg",
+      alt: "Silla operativa gris con brazos ajustables junto a un escritorio",
+    },
   ),
 
   product(
@@ -163,6 +187,10 @@ export const PRODUCTS: Product[] = [
     "sillas-iglesia",
     "Butaca reclinable para iglesia",
     2050,
+    {
+      src: "/assets/products/butaca-reclinable-iglesia.jpg",
+      alt: "Butacas reclinables rojas en un auditorio",
+    },
   ),
 
   product(
@@ -170,36 +198,68 @@ export const PRODUCTS: Product[] = [
     "mesas",
     "Mesa redonda con base metálica",
     2300,
+    {
+      src: "/assets/products/mesa-redonda-base-metalica.jpg",
+      alt: "Mesa redonda con base metálica y dos sillas",
+    },
   ),
   product(
     "base-metalica-mesa-alta",
     "mesas",
     "Base metálica para mesa alta",
     780,
+    {
+      src: "/assets/products/base-metalica-mesa-alta.jpg",
+      alt: "Mesa con estructura y base metálica",
+    },
   ),
-  product("mesa-rectangular-plegable", "mesas", "Mesa rectangular plegable", 1690),
+  product("mesa-rectangular-plegable", "mesas", "Mesa rectangular plegable", 1690, {
+    src: "/assets/products/mesa-rectangular-plegable.jpg",
+    alt: "Mesas rectangulares plegables con sillas plegables",
+  }),
 
   product(
     "camara-ip-domo-4mp",
     "seguridad",
     "Cámara IP domo 4MP con visión nocturna",
     1950,
+    {
+      src: "/assets/products/camara-ip-domo-4mp.jpg",
+      alt: "Cámara de seguridad tipo domo instalada en el techo",
+    },
   ),
-  product("kit-4-camaras-dvr", "seguridad", "Kit de 4 cámaras con DVR", 8200),
+  product("kit-4-camaras-dvr", "seguridad", "Kit de 4 cámaras con DVR", 8200, {
+    src: "/assets/products/kit-4-camaras-dvr.jpg",
+    alt: "Cámaras de seguridad tipo bala instaladas en un poste",
+  }),
   product(
     "camara-wifi-exteriores",
     "seguridad",
     "Cámara Wi-Fi para exteriores",
     1350,
+    {
+      src: "/assets/products/camara-wifi-exteriores.jpg",
+      alt: "Cámara de seguridad Wi-Fi para exteriores",
+    },
   ),
 
-  product("router-wifi-6", "redes", "Router Wi-Fi 6 doble banda", 1850),
-  product("switch-8-puertos", "redes", "Switch de 8 puertos Gigabit", 980),
+  product("router-wifi-6", "redes", "Router Wi-Fi 6 doble banda", 1850, {
+    src: "/assets/products/router-wifi-6.jpg",
+    alt: "Router Wi-Fi con antenas",
+  }),
+  product("switch-8-puertos", "redes", "Switch de 8 puertos Gigabit", 980, {
+    src: "/assets/products/switch-8-puertos.jpg",
+    alt: "Switch de red con puertos Ethernet",
+  }),
   product(
     "adaptador-usb-wifi",
     "redes",
     "Adaptador USB Wi-Fi de largo alcance",
     450,
+    {
+      src: "/assets/products/adaptador-usb-wifi.jpg",
+      alt: "Adaptador USB Wi-Fi conectado a una laptop",
+    },
   ),
 
   product(
@@ -207,18 +267,30 @@ export const PRODUCTS: Product[] = [
     "audio",
     "Audífonos Bluetooth con cancelación de ruido",
     1250,
+    {
+      src: "/assets/products/audifonos-bluetooth-anc.jpg",
+      alt: "Audífonos Bluetooth negros sobre fondo oscuro",
+    },
   ),
   product(
     "parlante-bluetooth-portatil",
     "audio",
     "Parlante Bluetooth portátil",
     890,
+    {
+      src: "/assets/products/parlante-bluetooth-portatil.jpg",
+      alt: "Parlante Bluetooth portátil color rojo",
+    },
   ),
   product(
     "microfono-condensador-streaming",
     "audio",
     "Micrófono de condensador para streaming",
     1650,
+    {
+      src: "/assets/products/microfono-condensador-streaming.jpg",
+      alt: "Micrófono de condensador dorado sobre fondo oscuro",
+    },
   ),
 
   product(
@@ -226,27 +298,49 @@ export const PRODUCTS: Product[] = [
     "accesorios",
     "Mochila para laptop resistente al agua",
     750,
+    {
+      src: "/assets/products/mochila-laptop-resistente.jpg",
+      alt: "Mochila negra para laptop",
+    },
   ),
   product(
     "cargador-universal-90w",
     "accesorios",
     "Cargador universal para laptop 90W",
     620,
+    {
+      src: "/assets/products/cargador-universal-90w.jpg",
+      alt: "Cargador universal con adaptadores y cable USB-C",
+    },
   ),
-  product("cable-hdmi-3m", "accesorios", "Cable HDMI 2.0 de 3 metros", 280),
+  product("cable-hdmi-3m", "accesorios", "Cable HDMI 2.0 de 3 metros", 280, {
+    src: "/assets/products/cable-hdmi-3m.jpg",
+    alt: "Cable HDMI enrollado con conector visible",
+  }),
 
-  product("monitor-led-24-fhd", "monitores", 'Monitor LED 24" Full HD', 4200),
+  product("monitor-led-24-fhd", "monitores", 'Monitor LED 24" Full HD', 4200, {
+    src: "/assets/products/monitor-led-24-fhd.jpg",
+    alt: "Monitor LED sobre un escritorio",
+  }),
   product(
     "proyector-portatil-fhd",
     "monitores",
     "Proyector portátil Full HD",
     7500,
+    {
+      src: "/assets/products/proyector-portatil-fhd.jpg",
+      alt: "Proyector portátil blanco sobre un escritorio",
+    },
   ),
   product(
     "monitor-curvo-27-144hz",
     "monitores",
     'Monitor curvo 27" 144Hz',
     8900,
+    {
+      src: "/assets/products/monitor-curvo-27-144hz.jpg",
+      alt: "Monitor curvo sobre un escritorio de madera",
+    },
   ),
 ];
 
