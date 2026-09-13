@@ -6,14 +6,14 @@ import {
   UtensilsCrossed,
   type LucideIcon,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { ImagePlaceholder } from "@/app/components/image-placeholder";
 
 const CATEGORIES: {
   icon: LucideIcon;
   title: string;
   description: string;
-  image: string;
+  image: { src: string; alt: string };
   categoryId: string;
 }[] = [
   {
@@ -21,7 +21,10 @@ const CATEGORIES: {
     title: "Sistemas de seguridad",
     description:
       "Cámaras, control de acceso y monitoreo para proteger tu negocio o vivienda.",
-    image: "Foto: cámaras de seguridad",
+    image: {
+      src: "/assets/products/camara-ip-domo-4mp.jpg",
+      alt: "Cámara de seguridad tipo domo instalada en el techo",
+    },
     categoryId: "seguridad",
   },
   {
@@ -29,7 +32,10 @@ const CATEGORIES: {
     title: "Computadoras de alto rendimiento",
     description:
       "Equipos de cómputo para oficina, diseño y gaming, con garantía oficial.",
-    image: "Foto: equipo de cómputo",
+    image: {
+      src: "/assets/products/computadora-escritorio-i5.jpg",
+      alt: "Computadora de escritorio con monitor, teclado y mouse en oficina",
+    },
     categoryId: "computadoras",
   },
   {
@@ -37,7 +43,10 @@ const CATEGORIES: {
     title: "Mobiliario para restaurantes",
     description:
       "Mesas, sillas y bases metálicas duraderas para tu negocio de alimentos.",
-    image: "Foto: mobiliario de restaurante",
+    image: {
+      src: "/assets/products/mesa-redonda-base-metalica.jpg",
+      alt: "Mesa redonda con base metálica y sillas para restaurante",
+    },
     categoryId: "sillas-restaurante",
   },
   {
@@ -45,7 +54,10 @@ const CATEGORIES: {
     title: "Sillas de auditorio e iglesia",
     description:
       "Butacas cómodas y resistentes, pensadas para espacios de gran aforo.",
-    image: "Foto: sillas de auditorio",
+    image: {
+      src: "/assets/products/butaca-reclinable-iglesia.jpg",
+      alt: "Butacas reclinables rojas en un auditorio",
+    },
     categoryId: "sillas-iglesia",
   },
 ];
@@ -70,11 +82,18 @@ export function Categories() {
               href={`/productos?categoria=${categoryId}`}
               className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 transition-shadow hover:shadow-lg hover:shadow-slate-200/60"
             >
-              <ImagePlaceholder
-                label={image}
-                icon={Icon}
-                className="aspect-[4/3] w-full"
-              />
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                />
+                <span className="absolute top-3 left-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-sm backdrop-blur">
+                  <Icon className="h-4 w-4" />
+                </span>
+              </div>
               <div className="flex flex-1 flex-col gap-2 p-5">
                 <h3 className="text-base font-semibold text-slate-900">
                   {title}
