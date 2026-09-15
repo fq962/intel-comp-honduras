@@ -7,11 +7,12 @@ import {
   ChevronRight,
   Grid2x2,
   List,
+  Search,
   SlidersHorizontal,
   X,
 } from "lucide-react";
 import { ProductCard } from "@/app/components/product-card";
-import { CATEGORIES, PRODUCTS } from "@/app/lib/products";
+import { CATEGORIES, normalize, PRODUCTS } from "@/app/lib/products";
 
 const PAGE_SIZE = 9;
 
@@ -26,19 +27,28 @@ type SortValue = (typeof SORT_OPTIONS)[number]["value"];
 
 export function ProductCatalog({
   initialCategoryId,
+  initialQuery = "",
 }: {
   initialCategoryId: string | null;
+  initialQuery?: string;
 }) {
   const [categoryId, setCategoryId] = useState(initialCategoryId);
+  const [query, setQuery] = useState(initialQuery);
   const [sortBy, setSortBy] = useState<SortValue>("relevancia");
   const [view, setView] = useState<"grid" | "list">("grid");
   const [page, setPage] = useState(1);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const filteredProducts = useMemo(() => {
-    const base = categoryId
-      ? PRODUCTS.filter((p) => p.categoryId === categoryId)
-      : PRODUCTS;
+    const q = normalize(query);
+    const base = PRODUCTS.filter((p) => {
+      const matchesCategory = !categoryId || p.categoryId === categoryId;
+      const matchesQuery =
+        !q ||
+        normalize(p.name).includes(q) ||
+        normalize(p.category).includes(q);
+      return matchesCategory && matchesQuery;
+    });
 
     const sorted = [...base];
     if (sortBy === "precio-asc") {
@@ -49,7 +59,7 @@ export function ProductCatalog({
       sorted.sort((a, b) => a.name.localeCompare(b.name, "es"));
     }
     return sorted;
-  }, [categoryId, sortBy]);
+  }, [categoryId, query, sortBy]);
 
   const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -64,6 +74,11 @@ export function ProductCatalog({
 
   const selectSort = (value: SortValue) => {
     setSortBy(value);
+    setPage(1);
+  };
+
+  const handleQueryChange = (value: string) => {
+    setQuery(value);
     setPage(1);
   };
 
@@ -83,12 +98,37 @@ export function ProductCatalog({
 
       <div className="mx-auto max-w-7xl px-6 py-12">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          {activeCategory ? activeCategory.label : "Productos"}
+          {query.trim()
+            ? `Resultados para "${query.trim()}"`
+            : activeCategory
+              ? activeCategory.label
+              : "Productos"}
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-slate-600">
           Tecnología, mobiliario y sistemas de seguridad para tu empresa, con
           la garantía Intelcomp Honduras.
         </p>
+
+        <div className="mt-6 flex max-w-md items-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5">
+          <Search className="h-4 w-4 flex-shrink-0 text-slate-400" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => handleQueryChange(e.target.value)}
+            placeholder="Buscar productos..."
+            className="w-full text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={() => handleQueryChange("")}
+              aria-label="Limpiar búsqueda"
+              className="flex-shrink-0 text-slate-400 transition-colors hover:text-slate-600"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="mx-auto max-w-7xl px-6 pb-24">

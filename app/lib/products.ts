@@ -344,6 +344,14 @@ export const PRODUCTS: Product[] = [
   ),
 ];
 
+export function normalize(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
 export function formatPrice(price: number): string {
   return `L ${price.toLocaleString("es-HN", {
     minimumFractionDigits: 2,

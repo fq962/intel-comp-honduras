@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CartDrawer } from "@/app/components/cart/cart-drawer";
 import { CartProvider } from "@/app/components/cart/cart-context";
+import { SearchModal } from "@/app/components/search/search-modal";
+import { SearchProvider } from "@/app/components/search/search-context";
 import { SiteFooter } from "@/app/components/site-footer";
 import { SiteHeader } from "@/app/components/site-header";
 import "./globals.css";
@@ -30,10 +32,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col">
         <CartProvider>
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-          <CartDrawer />
+          <SearchProvider>
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+            <CartDrawer />
+            <SearchModal />
+          </SearchProvider>
         </CartProvider>
       </body>
     </html>

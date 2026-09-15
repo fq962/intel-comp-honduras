@@ -15,6 +15,13 @@ export default async function ProductosPage(props: PageProps<"/productos">) {
   const initialCategoryId = CATEGORIES.some((c) => c.id === categoria)
     ? categoria
     : null;
+  const buscar =
+    typeof searchParams.buscar === "string" ? searchParams.buscar : "";
 
-  return <ProductCatalog initialCategoryId={initialCategoryId} />;
+  return (
+    <ProductCatalog
+      initialCategoryId={initialCategoryId}
+      initialQuery={buscar}
+    />
+  );
 }

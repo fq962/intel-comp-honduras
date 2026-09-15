@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Menu, Phone, X } from "lucide-react";
 import { CartButton } from "@/app/components/cart/cart-button";
+import { SearchButton } from "@/app/components/search/search-button";
 
 const NAV_LINKS = [
   { href: "/", label: "Inicio" },
@@ -66,6 +67,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <SearchButton />
           <CartButton />
 
           <button
